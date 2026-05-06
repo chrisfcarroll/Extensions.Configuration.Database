@@ -12,13 +12,18 @@ For instance, in Program.cs
             config.SetBasePath(Directory.GetCurrentDirectory());
             config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
             config.AddJsonFile($"appsettings.{context.HostingEnvironment.EnvironmentName}.json", optional: false, reloadOnChange: true);
+// -- Add Database provider
             config.AddDatabaseTable(o =>
             {
                 o.ConnectionString
                     = context.Configuration.GetConnectionString("MyApplicationDatabase") ??
                       throw new ConfigurationException("ConnectionStrings:MyApplicationDatabase is missing");
                 o.TableName = "dbo.Settings";
+                // o.KeyColumnName = "...";
+                // o.ValueColumnName = "...";
+                // o.WhereClause = "IsActive = 1";
             });
+// -- 
             config.AddEnvironmentVariables();
             config.AddCommandLine(args);
         })

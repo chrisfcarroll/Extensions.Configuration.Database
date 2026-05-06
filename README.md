@@ -1,0 +1,2 @@
+# DatabaseConfigurationProvider
+A DatabaseConfigurationProvider for microsoft.extensions.configuration

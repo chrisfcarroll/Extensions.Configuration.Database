@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/README/">
+    <File Path="LICENSE" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="Extensions.Configuration.Database.Tests/Extensions.Configuration.Database.Tests.csproj" />
+  <Project Path="Extensions.Configuration.Database/Extensions.Configuration.Database.csproj" />
+</Solution>
